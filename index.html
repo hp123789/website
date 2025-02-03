@@ -446,8 +446,19 @@
       </div>
     </div>
     <div class="div-block-8">
+      <div class="text-block-15" id="pst-time"></div>
       <div class="text-block-15">Vancouver • Davis</div>
     </div>
+    <script>
+      function updateTime() {
+        const options = { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit' };
+        const formatter = new Intl.DateTimeFormat([], options);
+        const timeString = formatter.format(new Date());
+        document.getElementById('pst-time').textContent = `${timeString}`;
+      }
+      setInterval(updateTime, 1000);
+      updateTime(); // initial call to set the time immediately
+    </script>
     <script
       src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=679c6bfedd83c2c460fb1278"
       type="text/javascript"
