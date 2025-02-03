@@ -2156,6 +2156,7 @@ html {
     height: 50px;
     margin-left: 10%;
     margin-right: 10%;
+    gap: 10px;
     display: flex;
   }
   
